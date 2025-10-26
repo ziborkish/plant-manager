@@ -1,0 +1,134 @@
+/* ===== Vispārīgais ===== */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0;
+  background-color: #fef7e0; /* krēmīgs / oil paint paper efekts */
+  color: #082408;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Apple Garamond', serif;
+  font-style: italic;
+  color: #082408;
+  margin-bottom: 20px;
+}
+
+/* ===== Augu konteineris ===== */
+.plants-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+/* ===== Augu rinda ===== */
+.plant {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto; /* 3 kolonnas + poga */
+  gap: 10px;
+  padding: 12px 15px;
+  border: 1px solid #082408;
+  border-radius: 6px;
+  background-color: transparent;
+  align-items: center;
+}
+
+.plant-name,
+.status,
+.last-watered {
+  justify-self: start; /* Teksts kreisajā pusē */
+}
+
+.plant button {
+  justify-self: end; /* Poga labajā pusē */
+}
+
+/* ===== Teksti rindās ===== */
+.plant-name {
+  font-family: 'Apple Garamond', serif;
+  font-style: italic;
+  color: #082408;
+  font-weight: normal;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.status, .last-watered {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.status {
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.status.ok { background-color: #3D8843; }
+.status.warning { background-color: #D98630; }
+.status.need-water { background-color: #B02929; }
+
+.last-watered {
+  color: #082408;
+}
+
+/* ===== Pogas ===== */
+.plant button,
+#export-data,
+#import-data {
+  padding: 6px 8px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: #082408;
+  background-color: transparent;
+  border: 1px solid #082408;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.2;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.plant button:hover,
+#export-data:hover,
+#import-data:hover {
+  background-color: rgba(8,36,8,0.05);
+}
+
+/* ===== Kontroles konteiners ===== */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 500px) {
+  .plant {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 8px;
+  }
+
+  .last-watered, .plant button {
+    grid-column: span 2;
+    justify-self: start; /* mazā ekrānā poga arī pa kreisi */
+  }
+
+  .plant-name {
+    font-size: clamp(1rem, 4vw, 1.1rem);
+  }
+}
