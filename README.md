@@ -1,25 +1,35 @@
 # 🌱 Plant Manager
 
-Vieda tīmekļa lietotne, kas palīdz sekot līdzi augu laistīšanas grafikam un mācās no taviem ieradumiem.
+**Plant Manager** ir neliela viedā tīmekļa lietotne, kas palīdz sekot līdzi tavu augu laistīšanas grafikam.  
+Tā mācās no taviem ieradumiem, analizē, cik bieži tu aplaisti katru augu, un ar laiku precīzāk iesaka, kad būtu laiks tos atkal laistīt.
 
 ---
 
-## 💧 Funkcijas
-- Pārvaldi augu sarakstu ar pēdējo laistīšanas datumu.  
-- Atzīmē, kad augs ir aplaistīts.  
-- Sistēma mācās tavu ritmu un pielāgo ieteikumus.  
-- Krāsu statusi: 🟩 OK · 🟧 Drīz jālaista · 🟥 Jālaista.  
-- Dati saglabājas pārlūkā (localStorage).  
-- Datu eksports/imports `.json` formātā.
+## 🧩 Funkcionalitāte
+
+- 🌿 **Augu saraksts** – katrs augs redzams ar nosaukumu, statusu un pēdējo laistīšanas laiku.  
+- 💧 **Laistīšanas reģistrēšana** – ar vienu klikšķi atzīmē, ka augs ir aplaistīts.  
+- ⏱️ **Automātiska mācīšanās** – sistēma aprēķina vidējo intervālu starp laistīšanām un pielāgo ieteikumus.  
+- 📊 **Statusa krāsas**:
+  - 🟩 **OK** – augs laistīts nesen; viss kārtībā.  
+  - 🟧 **Vēlams aplaistīt** – tuvojas ieteicamais intervāls.  
+  - 🟥 **Jālaista** – augs nav laistīts pārāk ilgi.  
+- 💾 **Datu saglabāšana** – visa informācija tiek glabāta lokāli pārlūkā (localStorage).  
+- ⬆️⬇️ **Datu eksports un imports** – iespējams saglabāt datus kā `.json` failu un vēlāk tos atjaunot.  
 
 ---
 
-## 🛠️ Tehnoloģijas
-HTML · CSS · JavaScript (bez servera puses)
+## 🖥️ Tehnoloģijas
+
+- **HTML5** – struktūra  
+- **CSS3** – tīrs, pielāgots dizains bez ietvariem  
+- **JavaScript (ES6)** – loģika, datu apstrāde un localStorage vadība  
+- **Bez servera puses** – viss darbojas tieši pārlūkā (ideāli priekš `localhost` vai statiskas hostēšanas)
 
 ---
 
-## 🚀 Lietošana
-1. Klonē repozitoriju:  
+## 🚀 Uzstādīšana un palaišana
+
+1. Lejupielādē vai klonē repozitoriju:
    ```bash
    git clone https://github.com/ziborkish/plant-manager.git
